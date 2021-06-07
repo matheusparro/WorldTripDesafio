@@ -16,12 +16,16 @@ export const theme = extendTheme({
     },
     cyan:{
       "700":"#47585B"
+    },
+    yellow:{
+
+      "700":"#FFBA08"
     }
     
   },
   fonts:{
-    heading: 'Roboto',
-    body: 'Roboto',
+    heading: 'Poppins',
+    body: 'Poppins',
   },
   styles:{
     global:{

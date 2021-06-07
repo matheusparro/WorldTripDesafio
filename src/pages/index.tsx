@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {Flex,Image,Box,Text, SimpleGrid ,Stack} from '@chakra-ui/react'
+import {Flex,Image,Box,Text, SimpleGrid ,Stack,Divider,Heading} from '@chakra-ui/react'
 import { Header } from '../components/Header'
+import { SwiperComp } from '../components/Swiper'
 export default function Home() {
   return (
     <Flex  direction="column" h="100vh">
@@ -21,17 +22,31 @@ export default function Home() {
             </Flex>
           </Box>
         </Flex>
-        <SimpleGrid gridTemplateColumns="1fr 1fr 1fr 1fr 1fr" width="100%"maxWidth={1440} margin="0 auto">
-        <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center"><Image src="cocktail.svg"></Image><Text mt="23px">vida noturna</Text></Box>
+        
+        <SimpleGrid gridTemplateColumns="1fr 1fr 1fr 1fr 1fr" width="100%"maxWidth={"1440px"} margin="0 auto">
+        <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center"><Image src="cocktail.svg"></Image><Text color="cyan.700" mt="23px">vida noturna</Text></Box>
           <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center"><Image src="surf.svg"></Image><Text mt="23px">praia</Text></Box>
           <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center"><Image src="building.svg"></Image><Text mt="23px">moderno</Text></Box>
           <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center"><Image src="museum.svg"></Image><Text mt="23px">clássico</Text></Box>
           <Box display="flex"  flexDirection="column" alignItems="center" justifyContent="center"><Image src="earth.svg"></Image><Text mt="23px">e mais...</Text></Box>    
         </SimpleGrid>
         
-      
-      </Stack>
-    </Flex>
+        
+        <Divider
+        variant="solid"
+        borderColor="dark.500"
+        w="90px"
+      />
+
+      <Flex direction="column" m={"16"}>
+        <Heading textAlign="center" fontSize={["1.25rem", "1.75rem", "2.25rem"]}>
+          Vamos nessa? <br /> Então escolha seu continente
+        </Heading>
+     </Flex> 
+    <SwiperComp/>
+    
+       </Stack>
+     </Flex>
    
 
   )
